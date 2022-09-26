@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+  <link rel="manifest" href="favicon//site.webmanifest">
+  <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/jquery-1.12.4.js" defer></script>
+  <script src="js/jquery-ui.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <title>Euclid</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__block flex">
+      <button aria-label="Открыть навигацию" class="header-burger btn-reset">
+        <span class="burger-line burger-line1"></span>
+        <span class="burger-line burger-line2"></span>
+        <span class="burger-line burger-line3"></span>
+      </button>
+      <a href="#" class="header__logo" aria-label="Логотип">
+        <picture class="header-logo">
+          <source srcset="img/header-logo.svg" media="(min-width:1377px)">
+          <source srcset="img/header-logo_sml.svg" media="(min-width:401px)">
+          <source srcset="img/header-logo_smller.svg" media="(max-width:400px)">
+          <img src="img/header-logo.png" alt="Euclid-logo">
+        </picture>
+      </a>
+      <nav class="header__nav flex">
+        <ul class="nav-list list-reset flex">
+          <li class="nav-item">
+            <a href="#About-us" class="nav-link" aria-label="About Us">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-label="Projects">
+              Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-label="Stages">
+              Stages
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-label="Reviews">
+              Reviews
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-label="Contacts">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button btn-reset" id="open-search-form" aria-label="search">
+        <svg class="header-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
+          <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
+          </svg>
+      </button>
+      <form action="https://jsonplaceholder.typicode.com/posts" class="search-form" id="search-form" aria-label="search">
+        <input class="search-form__input" type="text" placeholder="What are we looking for?">
+        <button aria-label="search" class="search-form__search btn-reset" id="search-form-search" type="submit">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="#FF9900"/>
+            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#FF9900" stroke-width="2"/>
+            </svg>
+        </button>
+        <button class="search-form__close btn-reset" id="search-form-close" type="submit" aria-label="close">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
+            <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
+            <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+            </svg>
+        </button>
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <section id="hero" class="hero">
+      <div class="container hero__container">
+        <div class="hero__content flex">
+          <h1 class="hero-title">
+            Design solutions of&nbsp;any complexity
+          </h1>
+          <p class="hero-desc">
+            There is&nbsp;something to&nbsp;think about: the basic scenarios of&nbsp;user behavior to&nbsp;this day remain the lot of&nbsp;designers
+          </p>
+          <a href="#" class="hero__btn btn-reset" aria-label="Order calculation">
+            Order calculation
+          </a>
+        </div>
+        <div class="swiper-container">
+          <!-- враппер -->
+          <div class="swiper-wrapper">
+            <!-- слайды -->
+            <div class="swiper-slide swiper-slide1"></div>
+            <div class="swiper-slide swiper-slide2"></div>
+            <div class="swiper-slide swiper-slide3"></div>
+          </div>
+        </div>
+        <!-- кнопки пагинации -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section id="About-us" class="about-us">
+      <div class="container">
+        <h2 class="about-us__title">About Us</h2>
+        <p class="about-us__desc">Just as&nbsp;long-term planning creates the need to&nbsp;include a&nbsp;number of&nbsp;extraordinary events in&nbsp;the production plan, taking into account a&nbsp;set of&nbsp;experiments that are striking in&nbsp;their scale and grandiosity. Also, link diagrams can be&nbsp;described in&nbsp;as&nbsp;much detail as&nbsp;possible. We&nbsp;are forced to&nbsp;start from the fact that the conviction of&nbsp;some opponents requires&nbsp;us to&nbsp;analyze both self-sufficient and externally dependent conceptual solutions! It&nbsp;should be&nbsp;noted that a&nbsp;high-quality prototype of&nbsp;the future project determines the high demand for the positions occupied by&nbsp;the participants in&nbsp;relation to&nbsp;the tasks set. We&nbsp;have to&nbsp;start from the fact that a&nbsp;high-quality prototype of&nbsp;a&nbsp;future project helps to&nbsp;improve the quality of&nbsp;experiments.
+        </p>
+        <div class="about-us-wrap flex">
+          <div class="about-us__article1  about-us__img1">
+            <div class="about-us__wrapper1">
+              <div class="about-us-article-block1 flex">
+                <p class="about-us-item-desc1">Taking into account the indicators of&nbsp;success, forward planning contributes to&nbsp;the preparation and implementation of&nbsp;new principles</p>
+                <a href="#" class="about-us-item-button" aria-label="More">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="about-us__wrap1 flex">
+            <article class="about-us__article2">
+              <div class="about-us-article-block2 about-us-img1 flex">
+                <div class="about-us-item-wrap flex">
+                  <h3 class="about-us-item-title2">Consultation with a wide asset</h3>
+                  <p class="about-us-item-desc2">And also a&nbsp;fresh look at&nbsp;familiar things&nbsp;&mdash; certainly opens up&nbsp;new horizons for both self-sufficient and externally dependent conceptual solutions.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="about-us__article2">
+              <div class="about-us-article-block2 about-us-img2 flex">
+                <div class="about-us-item-wrap flex">
+                  <h3 class="about-us-item-title2">In an effort to increase</h3>
+                  <p class="about-us-item-desc2">Quality of&nbsp;life, they forget that the cohesion of&nbsp;a&nbsp;team of&nbsp;professionals is&nbsp;an&nbsp;interesting experiment in&nbsp;testing the progress of&nbsp;a&nbsp;professional community</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Our-work" class="our-work">
+      <div class="container">
+        <h2 class="our-work__title">
+          How we are working
+        </h2>
+        <ul class="our-work__list list-reset flex">
+          <li class="our-work-item">
+            <button class="our-work-item-link btn-reset our-work-item-link--active" data-path="one" aria-label="1st step">1st step</button>
+          </li>
+          <li class="our-work-item">
+            <button class="our-work-item-link btn-reset" data-path="two" aria-label="2st step">2st step</button>
+          </li>
+          <li class="our-work-item">
+            <button class="our-work-item-link btn-reset" data-path="three" aria-label="3st step">3st step</button>
+          </li>
+          <li class="our-work-item">
+            <button class="our-work-item-link btn-reset" data-path="four" aria-label="4st step">4st step</button>
+          </li>
+        </ul>
+        <div class="our-work__tabs">
+          <div class="our-work__wrap flex our-work__wrap--active" data-target="one">
+            <div class="our-work-block1 flex">
+              <h3 class="our-work-title">
+                We carry out consultations
+              </h3>
+              <p class="our-work-desc">
+                It&nbsp;entails the process of&nbsp;introducing and modernizing the prioritization of&nbsp;reason over emotions. Within the framework of&nbsp;the specification of&nbsp;modern standards, some features of&nbsp;domestic policy will be&nbsp;objectively considered by&nbsp;the relevant authorities.
+                Also, representatives of&nbsp;modern social reserves, initiated exclusively synthetically, are limited solely by&nbsp;the way of&nbsp;thinking. Being just a&nbsp;part of&nbsp;the overall picture, replicated from foreign sources, modern research has been subjected to&nbsp;a&nbsp;whole series of&nbsp;independent studies. By&nbsp;the way, seeking to&nbsp;supplant traditional production, nanotechnologies highlight extremely interesting features of&nbsp;the picture as&nbsp;a&nbsp;whole, however, specific conclusions, of&nbsp;course, are called upon to&nbsp;answer.
+              </p>
+              <div class="our-work-btn-wrap">
+                <a href="#" class="our-work-btn1 btn-reset" aria-label="More">More</a>
+                <a href="#" class="our-work-btn2 btn-reset" aria-label="Contract">Contract</a>
+              </div>
+            </div>
+            <div class="our-work-img our-work-img1"></div>
+          </div>
+          <div class="our-work__wrap flex" data-target="two">
+            <div class="our-work-block1 flex">
+              <h3 class="our-work-title">
+                We draw up an estimate
+              </h3>
+              <p class="our-work-desc">
+                Implementation and modernization of&nbsp;the prioritization of&nbsp;reason over emotions. Within the framework of&nbsp;the specification of&nbsp;modern standards, some features of&nbsp;domestic policy will be&nbsp;objectively considered by&nbsp;the relevant authorities. Also, representatives of&nbsp;modern social reserves, initiated exclusively synthetically, are limited solely by&nbsp;the way of&nbsp;thinking. Being just a&nbsp;part of&nbsp;the overall picture, replicated from foreign sources, modern research has been subjected to&nbsp;a&nbsp;whole series of&nbsp;independent studies.
+              </p>
+              <div class="our-work-btn-wrap">
+                <a href="#" class="our-work-btn1 btn-reset" aria-label="More">More</a>
+                <a href="#" class="our-work-btn2 btn-reset" aria-label="Contract">Contract</a>
+              </div>
+            </div>
+            <div class="our-work-img our-work-img2"></div>
+          </div>
+          <div class="our-work__wrap" data-target="three">
+            <div class="our-work-block1 flex">
+              <h3 class="our-work-title">
+                We attract contractors
+              </h3>
+              <p class="our-work-desc">
+                Ideological considerations of&nbsp;a&nbsp;higher order, as&nbsp;well as&nbsp;a&nbsp;new model of&nbsp;organizational activity, require an&nbsp;analysis of&nbsp;the progress of&nbsp;the professional community. The high level of&nbsp;involvement of&nbsp;representatives of&nbsp;the target audience is&nbsp;a&nbsp;clear proof of&nbsp;a&nbsp;simple fact: a&nbsp;high-quality prototype of&nbsp;a&nbsp;future project directly depends on&nbsp;further development directions. Diverse and rich experience tells&nbsp;us that the new model of&nbsp;organizational activity speaks of&nbsp;the possibilities of&nbsp;a&nbsp;system of&nbsp;mass participation. Taking into account the success rates, the constant advocacy of&nbsp;our activities allows&nbsp;us to&nbsp;fulfill important tasks in&nbsp;developing the progress of&nbsp;the professional community.
+              </p>
+              <div class="our-work-btn-wrap">
+                <a href="#" class="our-work-btn1 btn-reset" aria-label="More">More</a>
+                <a href="#" class="our-work-btn2 btn-reset" aria-label="Contract">Contract</a>
+              </div>
+            </div>
+            <div class="our-work-img our-work-img3"></div>
+          </div>
+          <div class="our-work__wrap" data-target="four">
+            <div class="our-work-block1 flex">
+              <h3 class="our-work-title">
+                We inspect all stages of work
+              </h3>
+              <p class="our-work-desc">
+                The high level of&nbsp;involvement of&nbsp;representatives of&nbsp;the target audience is&nbsp;a&nbsp;clear proof of&nbsp;a&nbsp;simple fact: a&nbsp;high-quality prototype of&nbsp;a&nbsp;future project directly depends on&nbsp;further development directions. Diverse and rich experience tells&nbsp;us that the new model of&nbsp;organizational activity speaks
+                about the possibilities of&nbsp;the system of&nbsp;mass participation. Taking into account the success rates, the constant outreach support of&nbsp;our activities allows.
+              </p>
+              <div class="our-work-btn-wrap">
+                <a href="#" class="our-work-btn1 btn-reset" aria-label="More">More</a>
+                <a href="#" class="our-work-btn2 btn-reset" aria-label="Contract">Contract</a>
+              </div>
+            </div>
+            <div class="our-work-img our-work-img4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Questions" class="questions">
+      <div class="container">
+        <h2 class="questions__title">
+          Frequently asked questions
+        </h2>
+        <ul class="quesions-list list-reset accordion">
+          <li class="questions__item" >
+            <div class="btn-reset questions__item-btn questions__item-btn-extra1 flex">
+              <h3 class="questions__item-title questions__item-title1">What is&nbsp;the final cost of&nbsp;the project formed from?</h3>
+              <svg class="questions__item-svg" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__item-ellipse" cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="questions__item-block">
+              <p class="questions__item-accordion">Being just a&nbsp;part of&nbsp;the big picture, the direct participants of&nbsp;technological progress urge&nbsp;us to
+                to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;verified in&nbsp;a&nbsp;timely manner.
+                But a&nbsp;high-quality prototype of&nbsp;the future project is&nbsp;a&nbsp;qualitatively new level of&nbsp;priority requirements. And some other features of&nbsp;domestic politics, which are a&nbsp;vivid example of&nbsp;the continental European type of&nbsp;political culture, will be&nbsp;declared violating the universal norms of&nbsp;ethics and morality. And there is&nbsp;no&nbsp;doubt that the clear signs of&nbsp;the victory of&nbsp;institutionalization call&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;indicated as&nbsp;contenders for the role of&nbsp;key factors.</p>
+              <p class="questions__item-accordion">It&nbsp;is&nbsp;a&nbsp;pleasure, citizens, to&nbsp;see how certain features of&nbsp;domestic politics can be&nbsp;called to&nbsp;account. Clear signs of&nbsp;the victory of&nbsp;institutionalization are gaining popularity among certain segments of&nbsp;the population,
+                which means they should be&nbsp;combined into whole clusters of&nbsp;their own kind. Banal but irrefutable conclusions
+                as&nbsp;well as&nbsp;many famous personalities are calling&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;presented in&nbsp;an&nbsp;exceptionally positive light.</p>
+            </div>
+          </li>
+          <li class="questions__item" >
+            <div class="questions__item-btn questions__item-btn-extra2 btn-reset flex">
+              <h3 class="questions__item-title questions__item-title2"> I&nbsp;have my&nbsp;own project. Will we&nbsp;be&nbsp;able to&nbsp;refine&nbsp;/ implement&nbsp;it?</h3>
+              <svg class="questions__item-svg questions__item-svg-extra1" width="50" height="50" viewbox="0 0 50 50"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__item-ellipse" cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="questions__item-block">
+              <p class="questions__item-accordion">Being just a&nbsp;part of&nbsp;the big picture, the direct participants of&nbsp;technological progress urge&nbsp;us to
+                to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;verified in&nbsp;a&nbsp;timely manner.
+                But a&nbsp;high-quality prototype of&nbsp;the future project is&nbsp;a&nbsp;qualitatively new level of&nbsp;priority requirements. And some other features of&nbsp;domestic politics, which are a&nbsp;vivid example of&nbsp;the continental European type of&nbsp;political culture, will be&nbsp;declared violating the universal norms of&nbsp;ethics and morality. And there is&nbsp;no&nbsp;doubt that the clear signs of&nbsp;the victory of&nbsp;institutionalization call&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;indicated as&nbsp;contenders for the role of&nbsp;key factors.</p>
+              <p class="questions__item-accordion">It&nbsp;is&nbsp;a&nbsp;pleasure, citizens, to&nbsp;see how certain features of&nbsp;domestic politics can be&nbsp;called to&nbsp;account. Clear signs of&nbsp;the victory of&nbsp;institutionalization are gaining popularity among certain segments of&nbsp;the population,
+                which means they should be&nbsp;combined into whole clusters of&nbsp;their own kind. Banal but irrefutable conclusions
+                as&nbsp;well as&nbsp;many famous personalities are calling&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;presented in&nbsp;an&nbsp;exceptionally positive light.</p>
+            </div>
+          </li>
+          <li class="questions__item" >
+            <div class="questions__item-btn questions__item-btn-extra3 btn-reset flex">
+              <h3 class="questions__item-title questions__item-title3"> I&nbsp;choose between different companies. What is&nbsp;your difference?</h3>
+              <svg class="questions__item-svg questions__item-svg-extra3" width="50" height="50" viewbox="0 0 50 50"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__item-ellipse" cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="questions__item-block">
+              <p class="questions__item-accordion">Being just a&nbsp;part of&nbsp;the big picture, the direct participants of&nbsp;technological progress urge&nbsp;us to
+                to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;verified in&nbsp;a&nbsp;timely manner.
+                But a&nbsp;high-quality prototype of&nbsp;the future project is&nbsp;a&nbsp;qualitatively new level of&nbsp;priority requirements. And some other features of&nbsp;domestic politics, which are a&nbsp;vivid example of&nbsp;the continental European type of&nbsp;political culture, will be&nbsp;declared violating the universal norms of&nbsp;ethics and morality. And there is&nbsp;no&nbsp;doubt that the clear signs of&nbsp;the victory of&nbsp;institutionalization call&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;indicated as&nbsp;contenders for the role of&nbsp;key factors.</p>
+              <p class="questions__item-accordion">It&nbsp;is&nbsp;a&nbsp;pleasure, citizens, to&nbsp;see how certain features of&nbsp;domestic politics can be&nbsp;called to&nbsp;account. Clear signs of&nbsp;the victory of&nbsp;institutionalization are gaining popularity among certain segments of&nbsp;the population,
+                which means they should be&nbsp;combined into whole clusters of&nbsp;their own kind. Banal but irrefutable conclusions
+                as&nbsp;well as&nbsp;many famous personalities are calling&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;presented in&nbsp;an&nbsp;exceptionally positive light.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__item-btn questions__item-btn-extra4 btn-reset flex">
+              <h3 class="questions__item-title questions__item-title4"> Can I&nbsp;delegate work&nbsp;/ coordination with a&nbsp;contractor&nbsp;/ organization to&nbsp;you?</h3>
+              <svg class="questions__item-svg questions__item-svg-extra2" width="50" height="50" viewbox="0 0 50 50"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__item-ellipse" cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="questions__item-block">
+              <p class="questions__item-accordion">Being just a&nbsp;part of&nbsp;the big picture, the direct participants of&nbsp;technological progress urge&nbsp;us to
+                to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;verified in&nbsp;a&nbsp;timely manner.
+                But a&nbsp;high-quality prototype of&nbsp;the future project is&nbsp;a&nbsp;qualitatively new level of&nbsp;priority requirements. And some other features of&nbsp;domestic politics, which are a&nbsp;vivid example of&nbsp;the continental European type of&nbsp;political culture, will be&nbsp;declared violating the universal norms of&nbsp;ethics and morality. And there is&nbsp;no&nbsp;doubt that the clear signs of&nbsp;the victory of&nbsp;institutionalization call&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;indicated as&nbsp;contenders for the role of&nbsp;key factors.</p>
+              <p class="questions__item-accordion">It&nbsp;is&nbsp;a&nbsp;pleasure, citizens, to&nbsp;see how certain features of&nbsp;domestic politics can be&nbsp;called to&nbsp;account. Clear signs of&nbsp;the victory of&nbsp;institutionalization are gaining popularity among certain segments of&nbsp;the population,
+                which means they should be&nbsp;combined into whole clusters of&nbsp;their own kind. Banal but irrefutable conclusions
+                as&nbsp;well as&nbsp;many famous personalities are calling&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;presented in&nbsp;an&nbsp;exceptionally positive light.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__item-btn questions__item-btn-extra5 btn-reset flex">
+              <h3 class="questions__item-title questions__item-title5"> Can I&nbsp;return the money at&nbsp;any of&nbsp;the stages of&nbsp;work?</h3>
+              <svg class="questions__item-svg" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__item-ellipse" cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="questions__item-block">
+              <p class="questions__item-accordion">Being just a&nbsp;part of&nbsp;the big picture, the direct participants of&nbsp;technological progress urge&nbsp;us to
+                to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;verified in&nbsp;a&nbsp;timely manner.
+                But a&nbsp;high-quality prototype of&nbsp;the future project is&nbsp;a&nbsp;qualitatively new level of&nbsp;priority requirements. And some other features of&nbsp;domestic politics, which are a&nbsp;vivid example of&nbsp;the continental European type of&nbsp;political culture, will be&nbsp;declared violating the universal norms of&nbsp;ethics and morality. And there is&nbsp;no&nbsp;doubt that the clear signs of&nbsp;the victory of&nbsp;institutionalization call&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;indicated as&nbsp;contenders for the role of&nbsp;key factors.</p>
+              <p class="questions__item-accordion">It&nbsp;is&nbsp;a&nbsp;pleasure, citizens, to&nbsp;see how certain features of&nbsp;domestic politics can be&nbsp;called to&nbsp;account. Clear signs of&nbsp;the victory of&nbsp;institutionalization are gaining popularity among certain segments of&nbsp;the population,
+                which means they should be&nbsp;combined into whole clusters of&nbsp;their own kind. Banal but irrefutable conclusions
+                as&nbsp;well as&nbsp;many famous personalities are calling&nbsp;us to&nbsp;new achievements, which, in&nbsp;turn, must be&nbsp;presented in&nbsp;an&nbsp;exceptionally positive light.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__block flex">
+      <div class="footer__left flex">
+        <a href="#" class="footer__left-logo" aria-label="Логотип">
+          <picture class="footer-img">
+            <source srcset="img/footer-logo_sml.svg" media="(max-width:400px)">
+            <img src="img/footer-logo.svg" alt="Euclid-logo" class="footer-img">
+          </picture>
+        </a>
+        <ul class="footer-left-list list-reset">
+          <li class="footer-left-item" >
+            <a href="#" class="footer-left-item-link" aria-label="About Us">
+              <p class="footer-left-item-desc">
+                About Us
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item">
+            <a href="#" class="footer-left-item-link"  aria-label="Projects">
+              <p class="footer-left-item-desc">
+                Projects
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item" >
+            <a href="#" class="footer-left-item-link" aria-label="Reviews">
+              <p class="footer-left-item-desc">
+                Reviews
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item" >
+            <a href="#" class="footer-left-item-link" aria-label="Contract offer">
+              <p class="footer-left-item-desc">
+                Contract offer
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item">
+            <a href="#" class="footer-left-item-link"  aria-label="Work agreement">
+              <p class="footer-left-item-desc">
+                Work agreement
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item" >
+            <a href="#" class="footer-left-item-link" aria-label="Confidentiality">
+              <p class="footer-left-item-desc">
+                Confidentiality
+              </p>
+            </a>
+          </li>
+          <li class="footer-left-item" >
+            <a href="#" class="footer-left-item-link" aria-label="Partnership Agreement">
+              <p class="footer-left-item-desc">
+                Partnership Agreement
+              </p>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-left-list-img list-reset flex">
+          <li class="footer-left-item-img" ><a href="#" class="footer-left-link-logo" aria-label="Odnoklasniki">
+              <svg class="footer-left-list-svg" width="60" height="60" viewbox="0 0 60 60" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M25.7054 19.9812C25.7054 22.4546 27.7105 24.4598 30.1838 24.4598C32.6572 24.4598 34.6623 22.4546 34.6623 19.9812C34.6623 17.5079 32.6572 15.5028 30.1838 15.5028C27.7105 15.5028 25.7054 17.5079 25.7054 19.9812Z"
+                  fill="#666666" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M30 60C46.5686 60 60 46.5685 60 30C60 13.4315 46.5686 0 30 0C13.4314 0 0 13.4315 0 30C0 46.5685 13.4314 60 30 60ZM19.35 19.9811C19.35 13.9978 24.2004 9.14729 30.1838 9.14729C36.1673 9.14729 41.0176 13.9978 41.0176 19.9811C41.0176 25.9645 36.1673 30.8154 30.1838 30.8154C24.2004 30.8154 19.35 25.9645 19.35 19.9811ZM41.0823 36.3881C40.9448 36.4983 38.3457 38.5522 34.0085 39.4358L40.5554 45.9243C41.7067 47.0738 41.7081 48.9389 40.5586 50.0902C39.4091 51.2414 37.5444 51.2432 36.3927 50.0935L30.0368 43.904L24.2639 50.0536C23.6859 50.6532 22.9149 50.9547 22.1431 50.9547C21.407 50.9547 20.6703 50.6808 20.0986 50.1296C18.9274 49.0003 18.8935 47.1355 20.0228 45.9643L26.2369 39.4701C21.7782 38.6073 19.0718 36.4998 18.9324 36.3881C17.6633 35.3702 17.4594 33.5163 18.4772 32.247C19.4949 30.9778 21.3487 30.7739 22.6182 31.7916C22.645 31.8133 25.4756 33.9398 30.0366 33.9429C34.5977 33.9398 37.3698 31.8133 37.3966 31.7916C38.666 30.7739 40.5198 30.9778 41.5375 32.247C42.5553 33.5163 42.3515 35.3702 41.0823 36.3881Z"
+                  fill="#666666" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-left-item-img"><a href="#" class="footer-left-link-logo" aria-label="Vkontakte">
+              <svg class="footer-left-list-svg" width="60" height="60" viewbox="0 0 60 60" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988 41.4071 39.8339 40.3218C38.9837 39.457 38.195 38.5332 37.3762 37.6389C37.0416 37.2718 36.6893 36.9262 36.2695 36.6543C35.4316 36.1093 34.7036 36.2762 34.2236 37.1515C33.7344 38.0421 33.6227 39.0292 33.5761 40.0205C33.5092 41.4697 33.0721 41.8484 31.618 41.9165C28.5109 42.062 25.5628 41.5906 22.8227 40.0241C20.4055 38.6425 18.5346 36.6924 16.9043 34.4845C13.7297 30.1805 11.2984 25.4566 9.11386 20.597C8.6222 19.5026 8.98189 18.917 10.1893 18.8943C12.1952 18.8557 14.2011 18.8606 16.2071 18.8925C17.0234 18.9054 17.5636 19.3725 17.8772 20.1428C18.9612 22.8098 20.2901 25.3473 21.9554 27.7007C22.3992 28.3274 22.8522 28.9522 23.4973 29.3948C24.2093 29.8834 24.7519 29.7219 25.0877 28.9271C25.3025 28.4219 25.3952 27.8817 25.4418 27.3404C25.6014 25.486 25.6205 23.6323 25.3442 21.7854C25.1724 20.6296 24.5224 19.8832 23.3702 19.6647C22.7834 19.5536 22.8694 19.3363 23.1548 19.0011C23.6501 18.4217 24.1142 18.0632 25.0416 18.0632L31.9857 18.062C33.0801 18.2768 33.3256 18.7679 33.4742 19.8703L33.4803 27.5871C33.4674 28.0137 33.6945 29.2782 34.4606 29.5574C35.0744 29.76 35.4795 29.2677 35.8465 28.8792C37.5118 27.112 38.6983 25.0263 39.7608 22.8675C40.2298 21.9155 40.6343 20.9303 41.0271 19.9433C41.3193 19.2135 41.7735 18.8544 42.5972 18.8667L49.2841 18.8747C49.4811 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752 31.2994 43.9556 32.0133 45.2176 33.2446Z"
+                  fill="#666666" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__center flex">
+        <h2 class="footer__center-title">
+          Submit application
+        </h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" class="form flex">
+          <input class="form-input" type="text" name="full name" placeholder="Surname, name and patronymic" required aria-label="Surname, name and patronymic">
+          <input class="form-input" type="email" name="email" placeholder="Email*" required aria-label="Email">
+          <textarea class="form-textarea" name="comment" placeholder="Message" aria-label="Message"></textarea>
+        </form>
+        <div class="form-wrapper flex">
+          <button class="btn-reset form-btn" aria-label="Send data">
+            Send data
+          </button>
+          <label class="form-check">I&nbsp;agree to&nbsp;the processing of&nbsp;data
+            <input type="checkbox" required checked="checked" aria-label="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="footer__right flex">
+        <p class="footer__right-desc">
+          The high level of&nbsp;involvement of&nbsp;representatives of&nbsp;the target audience is&nbsp;a&nbsp;clear proof of&nbsp;a&nbsp;simple fact: diluted with a&nbsp;fair amount of&nbsp;empathy, rational thinking allows you to&nbsp;evaluate the value of&nbsp;the development model. So&nbsp;the consultation
+          with a&nbsp;wide asset provides a&nbsp;wide range&nbsp;of (specialists) participation in&nbsp;the formation of&nbsp;standard approaches.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
