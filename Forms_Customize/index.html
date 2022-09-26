@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=BeepBoop&lang=en_US" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/simplebar.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/inputmask.min.js" defer></script>
+  <script src="js/just-validate.production.min.js" defer></script>
+  <script src="js/choices.min.js" defer></script>
+  <script src="js/simplebar.min.js" defer></script>
+  <script src="js/popper.min.js" defer></script>
+  <script src="js/tippy-bundle.umd.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <title>Base</title>
+
+</head>
+
+<body>
+  <div class="container flex">
+    <div class="categories">
+      <h3>
+        Categories:
+      </h3>
+      <ul class="categoriesList">
+        <li class="category">
+          <input type="checkbox" name="checkbox-1" id="checkbox-1" class="customCheckbox">
+          <label for="checkbox-1">
+            Dinosaur
+          </label>
+        </li>
+        <li class="category">
+          <input type="checkbox" name="checkbox-2" id="checkbox-2" class="customCheckbox">
+          <label for="checkbox-2">
+            Bear
+          </label>
+        </li>
+        <li class="category">
+          <input type="checkbox" name="checkbox-3" id="checkbox-3" class="customCheckbox">
+          <label for="checkbox-3">
+            Roe deer
+          </label>
+        </li>
+        <li class="category">
+          <input type="checkbox" name="checkbox-4" id="checkbox-4" class="customCheckbox">
+          <label for="checkbox-4">
+            Fox
+          </label>
+        </li>
+        <li class="category">
+          <input type="checkbox" name="checkbox-5" id="checkbox-5" class="customCheckbox">
+          <label for="checkbox-5">
+            Wolf
+          </label>
+        </li>
+        <li class="category">
+          <input type="checkbox" name="checkbox-6" id="checkbox-6" class="customCheckbox">
+          <label for="checkbox-6">
+            Deer and elk
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div name="Materials" class="select">
+      <select id="select">
+        <option>Materials</option>
+        <option>Wood</option>
+        <option>Metal</option>
+        <option>Rock</option>
+        <option>Plastic</option>
+        <option>Composite</option>
+        <option>Gypsum</option>
+      </select>
+    </div>
+    <div id="map" class="map"></div>
+    <div class="scroll" data-simplebar>
+      It&nbsp;is&nbsp;difficult to&nbsp;say why many famous personalities are presented in&nbsp;an&nbsp;extremely
+      positive light. Only actively developing third world countries will be&nbsp;objectively considered by&nbsp;the
+      relevant authorities. We&nbsp;have to&nbsp;start from the fact that the high-tech concept of&nbsp;social order
+      is&nbsp;an&nbsp;interesting experiment in&nbsp;testing thoughtful reasoning. There is&nbsp;a&nbsp;controversial
+      point of&nbsp;view, which reads approximately as&nbsp;follows: the direct participants in&nbsp;technological
+      progress highlight extremely interesting features of&nbsp;the picture as&nbsp;a&nbsp;whole, but specific
+      conclusions, of&nbsp;course, are made public. The significance of&nbsp;these problems is&nbsp;so&nbsp;obvious that
+      socioeconomic development, as&nbsp;well as&nbsp;a&nbsp;fresh look at&nbsp;familiar things, certainly opens
+      up&nbsp;new horizons for priority requirements.
+    </div>
+    <div class="tooltip-container">
+      <p class="tooltip-container__desc">
+        It&nbsp;should be&nbsp;noted that socioeconomic development contributes to&nbsp;improving the quality
+        of&nbsp;rethinking foreign economic policies.
+      </p>
+      <div role="tooltip" class="tooltip-custom" tabindex="0" data-tippy-content="Chapter 2, page 176"></div>
+    </div>
+
+
+    <div class="validate">
+      <form action="#" class="form" autocomplete="off">
+        <div class="row1">
+          <label>
+            <input type="text" placeholder="Name*" name="name" id="name" class="customValidate">
+          </label>
+        </div>
+        <div class="row2">
+          <label>
+            <input name="tel" type="tel" placeholder="Phone*" id="tel" class="customValidate">
+          </label>
+        </div>
+        <div class="row3">
+          <label>
+            <input type="email" placeholder="Email*" name="email" id="email" class="customValidate">
+          </label>
+        </div>
+        <div class="btn-container">
+          <button class="form__btn">Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
